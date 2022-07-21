@@ -1,20 +1,20 @@
 
 // 1. 引入http模块
 const http = require('http');
-
 // 2. 创建服务
 const server = http.createServer(function(req, res) {
-  console.log('有人来访问了')
   res.setHeader("Content-Type", "text/html;application/json;charset=UTF-8");
   // 向客户端发送内容，并结束本次响应
   let url = req.url
   console.log(url)
+  // 获取url参数中回调函数名
   let fnName = url.split('?')[1].split('&').filter(item=>{
     if(item.indexOf("callback")!==-1){
         return true
     }
   })[0].split('=')[1]
   if(url.split('?')[0] == '/test'){
+    // 将数据作为回调函数实参传给前端页面
     res.end(`${fnName}({"messgae": '8084 访问成功'})`)
     return
   }

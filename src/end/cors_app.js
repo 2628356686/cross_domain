@@ -4,7 +4,7 @@ const http = require('http');
 
 // 2. 创建服务
 const server = http.createServer(function(req, res) {
-  console.log('有人来访问了')
+  // 设置cors响应头
   res.setHeader("Access-Control-Allow-Origin",'*');
   res.setHeader("Access-Control-Allow-Methods",'*')
   res.setHeader("Content-Type", "text/html;application/json;charset=UTF-8");
