@@ -1,5 +1,5 @@
-# cross_domain
-常用跨域方式的实例项目
+# cross_domain（常用跨域方式的实例项目）
+
 
 项目目录结构：
 |-- cross_domain
