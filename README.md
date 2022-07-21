@@ -1,4 +1,7 @@
 # cross_domain（常用跨域方式的实例项目）
+项目介绍：
+    主要为了学习现如今主流的跨域问题处理。
+    主要包含CORS/JSONP/服务器代理/WebSocket/PostMessage等跨域解决方案。
 
 
 项目目录结构：
