@@ -1,0 +1,57 @@
+2022/07/19 11:59:35 [emerg] 17428#12208: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:10 [emerg] 11036#19652: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:12 [emerg] 19172#7716: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:13 [emerg] 18144#17524: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:22 [emerg] 4380#18296: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:25 [emerg] 12412#1452: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:00:32 [emerg] 20148#11916: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:01:38 [emerg] 16168#17396: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:02:37 [emerg] 10792#6000: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:02:45 [emerg] 1260#18716: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:03:43 [emerg] 16612#10632: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:05:19 [emerg] 19304#18208: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:06:24 [emerg] 1916#19704: CreateFile() "C:\Users\jinhai\Desktop\快乐敲代码\nginx学习\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:27:18 [error] 5456#16336: *1 CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/07/19 12:31:02 [notice] 8808#3196: signal process started
+2022/07/19 12:31:14 [error] 5456#16336: *4 CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/07/19 12:31:25 [notice] 19368#13648: signal process started
+2022/07/19 12:31:25 [error] 19368#13648: CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/07/19 12:32:38 [notice] 11068#9868: signal process started
+2022/07/19 12:32:38 [error] 11068#9868: CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/07/19 12:32:52 [notice] 19620#17452: signal process started
+2022/07/19 12:33:10 [error] 5456#16336: *9 CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2022/07/19 12:35:25 [notice] 4748#14536: signal process started
+2022/07/19 12:35:25 [error] 4748#14536: CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/07/19 12:36:02 [notice] 3916#19732: signal process started
+2022/07/19 12:36:29 [notice] 6652#6168: signal process started
+2022/07/19 12:36:29 [error] 6652#6168: CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/07/19 12:36:49 [notice] 11420#19476: signal process started
+2022/07/19 12:38:05 [emerg] 14792#3624: CreateFile() "C:\Users\jinhai\Desktop\nginx-1.22.0\汇总完/conf/nginx.conf" failed (1113: No mapping for the Unicode character exists in the target multi-byte code page)
+2022/07/19 12:40:19 [notice] 15592#6692: signal process started
+2022/07/19 15:16:28 [error] 22908#12232: *1 CreateFile() "C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
+2022/07/19 15:22:55 [notice] 6620#4636: signal process started
+2022/07/19 15:24:01 [notice] 16476#19492: signal process started
+2022/07/19 15:25:00 [notice] 22788#7232: signal process started
+2022/07/19 15:27:38 [notice] 20644#5776: signal process started
+2022/07/19 15:29:00 [notice] 2192#23532: signal process started
+2022/07/19 15:31:45 [error] 21060#13368: *9 CreateFile() "C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/html/test" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /test HTTP/1.1", host: "localhost", referrer: "http://127.0.0.1:5500/nginx_study/front/app.html"
+2022/07/19 15:32:08 [notice] 23036#19732: signal process started
+2022/07/19 15:33:21 [notice] 21404#20792: signal process started
+2022/07/19 15:48:09 [emerg] 13932#3244: unknown directive "//鍏佽鎵�鏈夊煙鍚嶈法鍩熻闂唬鐞嗗湴鍧�" in C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf:21
+2022/07/19 15:48:49 [notice] 18892#22692: signal process started
+2022/07/19 15:51:28 [emerg] 1544#11800: unexpected "}" in C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf:51
+2022/07/19 15:51:43 [notice] 20496#17524: signal process started
+2022/07/19 15:53:39 [notice] 7968#19636: signal process started
+2022/07/19 16:12:59 [notice] 3216#22304: signal process started
+2022/07/19 16:14:19 [notice] 20340#10144: signal process started
+2022/07/19 16:14:42 [notice] 21368#8712: signal process started
+2022/07/19 16:21:14 [notice] 5080#15416: signal process started
+2022/07/19 16:24:25 [emerg] 9132#18936: "gzip_min_length" directive invalid value in C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf:49
+2022/07/19 16:24:43 [notice] 1100#21908: signal process started
+2022/07/19 16:25:51 [notice] 22684#22788: signal process started
+2022/07/19 16:29:07 [notice] 18328#22616: signal process started
+2022/07/19 16:37:42 [emerg] 23456#12376: "gzip_min_length" directive invalid value in C:\Users\jinhai\Desktop\code_show\nginx_study\nginx-1.22.0\nginx-1.22.0/conf/nginx.conf:49
+2022/07/19 16:38:01 [notice] 22252#22564: signal process started
+2022/07/19 17:39:12 [alert] 22536#18124: worker process 14120 exited with code C0000142
+2022/07/19 17:39:12 [alert] 22536#18124: could not respawn worker
+2022/07/20 15:25:41 [notice] 8164#12032: signal process started

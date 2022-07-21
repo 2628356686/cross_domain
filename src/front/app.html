@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨域实例项目</title>
+</head>
+<body>
+    <h1 style="text-align: center;">跨域实例项目</h1>
+    <div>
+        <p style="font-weight: bold">5500：live serve服务器（当前前端页面）</p>
+        <p>80：无跨域处理的后端api服务器</p>
+        <p>8081：nginx代理跨域服务器 ——> 转发去 80</p>
+        <p>8082：node代理跨域服务器 ——> 转发去 80</p>
+        <p>8083：cors跨域处理的后端api服务器</p>
+        <p>8084：jsonp跨域处理的后端api服务器</p>
+        <p>8085：基于iframe的postmessgae跨域的后端api服务器</p>
+        <p>8086：基于websocket跨域的后端api服务器</p>
+    </div>
+    <button>发送请求</button>
+    <input type="text" name="" id="" placeholder="请输入访问端口，默认80">
+    <ul></ul>
+    <script>
+        document.querySelector('button').onclick = send;
+        // jsonp方式回调函数
+        function getJsonpData(data) {
+            let port = document.querySelector('input').value
+            if(data){
+                let li = document.createElement('li')
+                li.textContent = (port ? port : '80') + ":" + data.messgae
+                document.querySelector("ul").appendChild(li)
+            }else{
+                let li = document.createElement('li')
+                li.textContent = (port ? port : '80') + ":" + "访问失败"
+                document.querySelector("ul").appendChild(li)
+            }
+        }
+        function send(){
+            let port = document.querySelector('input').value
+
+            if(port == 8086) {
+                var ws = new WebSocket('ws://localhost:'+port);
+                //监听建立连接
+                ws.onopen = function(res){
+                    // console.log('连接成功');
+                    // console.log(res);
+                }
+                //监听消息
+                ws.onmessage = function(res){
+                    // console.log('客户端接收到了服务端发来的消息');
+                    let msg = JSON.parse(res.data).messgae
+                    let li = document.createElement('li')
+                    li.textContent = (port ? port : '80') + ":" + msg
+                    document.querySelector("ul").appendChild(li)
+                }
+                ws.onerror = function(err) {
+                    let li = document.createElement('li')
+                    li.textContent = (port ? port : '80') + ":" + "访问失败"
+                    document.querySelector("ul").appendChild(li)
+                }
+                return 
+            }
+            if(port == 8085) {
+                // 使用ifrmane的postmessage跨域
+                var iframe = document.createElement("iframe");
+                iframe.style.display = 'none'
+                iframe.src = 'http://localhost:'+port;
+                document.body.appendChild(iframe)
+                iframe.onload = function(){
+                    // 设置连接超时，3s后iframe服务没有装载则判定为失败
+                    let timeout = setTimeout(()=>{
+                        // 触发超时，把失败信息渲染到页面
+                        let li = document.createElement('li')
+                        li.textContent = (port ? port : '80') + ":" + "访问失败"
+                        document.querySelector("ul").appendChild(li)
+                        // 移除本次添加的iframe元素
+                        document.body.removeChild(iframe)
+                        return new Error("加载超时")
+                    },3000)
+                    // 向8085服务器页面发送postmessage数据
+                    iframe.contentWindow.postMessage('我需要拿8085的数据', 'http://localhost:8085') //发送数据
+                    window.onmessage = function(e) { 
+                        // 拿到postmessage传来的数据渲染到页面上
+                        let li = document.createElement('li')
+                        li.textContent = (port ? port : '80') + ":" + e.data.messgae
+                        document.querySelector("ul").appendChild(li)
+                        // 连接成功了，清除错误定时器
+                        clearTimeout(timeout)
+                        timeout = null
+                        // 移除本次添加的iframe元素
+                        document.body.removeChild(iframe)
+                    }   
+                }
+                iframe.onerror = function() {
+                   
+                }
+                return 
+            }
+
+            if(port == 8084) {
+                // jsonp跨域原理（通过script标签不受同源策略影响）
+                var script = document.createElement("script");
+                script.src = 'http://localhost:'+port+'/test?callback=getJsonpData';
+                document.body.appendChild(script);
+                script.onload = function () {
+                    document.body.removeChild(script)
+                }
+                return
+            }
+            
+            // 其他方式（通过xhr发请求方式）
+            let xhr = new XMLHttpRequest()
+            xhr.open("GET",`http://localhost${':'+port}/test`)
+            xhr.send()
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200) {
+                    // xhr连接成功，把成功信息渲染到页面上
+                    let li = document.createElement('li')
+                    li.textContent = (port ? port : '80') + ":" + JSON.parse(xhr.response).messgae
+                    document.querySelector("ul").appendChild(li)
+                }else if(xhr.readyState == 4){
+                    // xhr连接失败，把失败信息渲染到页面上
+                    let li = document.createElement('li')
+                    li.textContent = (port ? port : '80') + ":" + "访问失败"
+                    document.querySelector("ul").appendChild(li)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
